@@ -15,11 +15,13 @@ pipeline {
 
         stage('Build with Maven') {
             steps {
-                container('maven') {
-                    sh 'mvn -B -Dmaven.repo.local=/root/.m2/repository clean install -DskipTests'
-                }
+                
+              sh 'mvn -B -Dmaven.repo.local=/root/.m2/repository clean install -DskipTests'
+
             }
         }
+        
+        
 
         /*
         stage('Build and Push Docker Image') {
