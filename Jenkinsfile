@@ -1,5 +1,5 @@
 pipeline {
-    agent { label "maven"}
+    agent { label "maven" }
 
     environment {
         DOCKER_HUB_REPO = "techiescamp/jenkins-java-app"
