@@ -31,10 +31,12 @@ pipeline {
                   tar -xvf docker-27.3.1.tgz;
                   mv docker/docker /usr/local/bin/;
                   docker --version;
+                  sudo systemctl start docker || dockerd &;
+                  docker info;
                   pwd;
                   ls -ltr;
-                  docker build -t my-first-maven-app.latest .
-                  '''
+                  DOCKER_BUILDKIT=1 docker build -t my-first-maven-app:latest .
+                '''
 
 
             }
