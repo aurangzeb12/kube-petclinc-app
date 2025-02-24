@@ -33,7 +33,7 @@ pipeline {
                   docker --version;
                   pwd;
                   ls -ltr;
-                  docker build _ -t my-first-maven-app.latest
+                  docker build -t my-first-maven-app.latest .
                   '''
 
 
