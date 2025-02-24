@@ -32,7 +32,7 @@ pipeline {
                   mv docker/docker /usr/local/bin/;
                   docker --version;
                   pwd;
-                  ls-ltr;
+                  ls -ltr;
                   docker build _ -t my-first-maven-app.latest
                   '''
 
