@@ -34,7 +34,7 @@ pipeline {
                   docker info;
                   pwd;
                   ls -ltr;
-                  DOCKER_BUILDKIT=1 docker build -t my-first-maven-app:latest .
+                  DOCKER_BUILDKIT=0 docker build -t my-first-maven-app:latest .
                 '''
 
 
